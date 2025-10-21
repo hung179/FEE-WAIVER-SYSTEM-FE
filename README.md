@@ -1,0 +1,1 @@
+FEE-WAIVER-SYSTEM Frontend — A ReactJS-based web application that provides an intuitive interface for managing student fee waiver requests, user roles, and administrative operations, seamlessly integrated with the Spring Boot backend via secure RESTful APIs.
