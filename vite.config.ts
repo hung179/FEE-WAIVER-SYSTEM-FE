@@ -8,5 +8,21 @@ export default defineConfig({
   server: {
     port: 4000,
     open: true,
+    proxy: {
+    // Proxy backend (Spring Boot)
+    '/api': {
+      target: 'http://localhost:3000',
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/api/, ''),
+    },
+
+    // Proxy API địa chỉ
+    '/address-api': {
+      target: 'https://production.cas.so',
+      changeOrigin: true,
+      secure: true,
+      rewrite: (path) => path.replace(/^\/address-api/, ''),
+    },
+  },
   },
 });
